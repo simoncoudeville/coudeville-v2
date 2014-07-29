@@ -15,6 +15,57 @@ $fluid-grid-margin: ($grid-margin / $grid-width) * 100 ;
 
 // mixins
 
+// rem paddings
+
+@mixin rem-padding-lr($pl: 1, $pr: 1) {
+
+	@if $pl > 0 {
+		padding-left: $pl * $alpha-font-size * 1px;
+		padding-left: $pl * 1rem;
+	}
+
+	@if $pr > 0 {
+		padding-right: $pr * $alpha-font-size * 1px;
+		padding-right: $pr * 1rem;
+	}
+
+}
+
+@mixin rem-padding-left($pl: 1) {
+
+	@if $pl > 0 {
+		padding-left: $pl * $alpha-font-size * 1px;
+		padding-left: $pl * 1rem;
+	}
+
+}
+
+@mixin rem-padding-right($pr: 1) {
+
+	@if $pr > 0 {
+		padding-right: $pr * $alpha-font-size * 1px;
+		padding-right: $pr * 1rem;
+	}
+
+}
+
+@mixin rem-padding-tb($pt: 1, $pb: 1) {
+	@if $pt > 0 {
+		padding-top: $pt * $alpha-font-size * 1px;
+		padding-top: $pt * 1rem;
+	}
+
+	@if $pb > 0 {
+		padding-bottom: $pb * $alpha-font-size * 1px;
+		padding-bottom: $pb * 1rem;
+	}
+}
+
+@mixin rem-padding($top: 1, $right: 1, $bottom: 1, $left: 1) {
+	padding: $alpha-font-size * $top * 1px $alpha-font-size * $right * 1px $alpha-font-size * $bottom * 1px $alpha-font-size * $left * 1px;
+	padding: $top * 1rem $right * 1rem $bottom * 1rem $left * 1rem;
+}
+
 // horizontal padding based on the context grid gutter in em
 // use: @include em-padding-lr(#left, #right);
 
@@ -72,7 +123,7 @@ $fluid-grid-margin: ($grid-margin / $grid-width) * 100 ;
 	width: ($fluid-grid-column * $amount) + ($fluid-grid-gutter * $amount) + 0%;
 	float: left;
 	position: relative;
-	@include px-padding-lr($left, $right);
+	@include rem-padding-lr($left, $right);
 	// @include em-padding-lr($left, $right); // experimental
 }
 

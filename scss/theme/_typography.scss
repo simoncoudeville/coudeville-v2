@@ -42,7 +42,7 @@ dl,
 table,
 address,
 pre {
-	@include baseline-dimensions(0,1,2,1);
+	@include text-dimensions(0,1,1);
 }
 
 ul,
