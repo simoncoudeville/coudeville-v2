@@ -8,18 +8,34 @@
 $baseline-unit: $alpha-font-size * $alpha-line-height;
 $basefontpercent: $alpha-font-size/16 * 100;
 
-@mixin text-dimensions($fs: 16, $lh: 1, $mb: 1, $pt: 0, $pb: 0){
+@mixin text-dimensions($fs: 1, $lh: 1, $mb: 0, $pt: 0, $pb: 0, $mt: 0){
 	// use this for rems
-	// font-size: #{$fs}px;
-	// font-size: #{$fs / $alpha-font-size}rem;
-	font-size: #{$fs / $alpha-font-size}em;
-	line-height: #{($baseline-unit / $fs) * $lh}em;
-	margin-bottom: #{($baseline-unit / $fs) * $mb}em;
+	font-size: #{ms($fs)}px;
+	font-size: ms($fs)/$basefontsize*1rem;
+	// font-size: ms($fs)/$basefontsize*1em;
+	// line-height: #{($baseline-unit / ms($fs)) * $lh}rem;
+	line-height: #{($baseline-unit / ms($fs)) * $lh}em;
+	// margin-bottom: #{($baseline-unit / ms($fs)) * $mb}em;
+
+	@if $mb > 0 {
+		margin-bottom: $mb * $basefontsize * 1px;
+		margin-bottom: $mb * 1rem;
+	}
+
+	@if $mt > 0 {
+		margin-top: $mt * $basefontsize * 1px;
+		margin-top: $mt * 1rem;
+	}
+
 	@if $pt > 0 {
-		padding-top: #{($baseline-unit / $fs) * $pt}em;
+		// padding-top: #{($baseline-unit / ms($fs)) * $pt}em;
+		padding-top: $pt * $basefontsize * 1px;
+		// padding-top: $pt * 1rem;
 	}
 	@if $pb > 0 {
-		padding-bottom: #{($baseline-unit / $fs) * $pb}em;
+		// padding-bottom: #{($baseline-unit / ms($fs)) * $pb}em;
+		padding-bottom: $pb * $basefontsize * 1px;
+		padding-bottom: $pb * 1rem;
 	}
 }
 

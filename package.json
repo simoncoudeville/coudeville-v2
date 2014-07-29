@@ -1,7 +1,7 @@
 {
-  "name": "Frontend workflow",
+  "name": "frontend-workflow",
   "version": "0.0.0",
-  "description": "Frontend workflow",
+  "description": "frontend-workflow",
   "main": "gulpfile.js",
   "devDependencies": {
     "gulp": "3.8.5",
