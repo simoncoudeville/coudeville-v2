@@ -2,13 +2,15 @@
 // Frame
 //
 
-.holder {
-	background-color: $delta-ui-color;
-	@include rem-padding-tb(1,0);
+html,
+body {
+	height: 100%;
+}
 
-	@include mq($bp4) {
-		@include rem-padding-tb(1,1);
-	}
+.holder {
+	// background-color: $delta-ui-color;
+	@include rem-padding-tb(2,1);
+	@include rem-padding-lr(1,1);
 }
 
 //
@@ -20,10 +22,13 @@
 }
 
 .logo {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	// @extend %uppercase;
 	// float: left;
-	font-family: $alpha-font-family;
-	font-weight: $alpha-font-weight;
-	@include text-dimensions(0,1,1);
+	font-family: $beta-font-family;
+	// font-weight: $alpha-font-weight;
+	@include text-dimensions(-1,1,1);
 }
 
 //

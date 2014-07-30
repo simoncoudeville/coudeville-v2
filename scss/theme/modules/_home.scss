@@ -2,6 +2,53 @@
 // module: home
 //
 
+.intro-holder {
+	background-color: $alpha-ui-color;
+	height: 100%;
+	width: 100%;
+	// padding: 0;
+
+	@include mq($bp3) {
+		@include rem-padding-tb(6,5);
+	}
+
+}
+
+.intro-row {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	max-width: 100%;
+}
+
 .intro {
-	@include box-(12,1,1);
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
+	// margin: 0;
+	// max-width: 32em;
+	// margin-left: auto;
+	// margin-right: auto;
+	color: hsl(hue($alpha-ui-color),80,25);
+	@include rem-padding-lr(1,1);
+
+	a {
+		// color: hsl(hue($alpha-ui-color),80,30);
+		color: hsl(hue($alpha-ui-color),80,25);
+	}
+
+	@include mq($bp3) {
+		width: 75%;
+	}
+
+	@include mq($bp4) {
+		width: 50%;
+	}
+
+}
+
+.intro-text {
+
 }

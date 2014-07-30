@@ -12,14 +12,14 @@ $show-baseline-grid: false; // toggle the visibility of the baseline (true/false
 $baseline-holder: holder; // set the classname of the element which will show the baseline
 $grid-color: rgba(#000,0.1); // set the baseline grid color and opacity
 
-$alpha-font-family	: sans-serif;
-$alpha-font-size	: 16; // pixel-value
+$alpha-font-family	: "elena-web-basic", serif;
+$beta-font-family	: "freight-sans-pro", serif;
+$alpha-font-size	: 18; // pixel-value
 $alpha-font-weight	: 400;
 $alpha-line-height	: 1.4; // em-value
 $alpha-baseline-grid: 7; // pixel-value
 $alpha-leading		: 1; // multiplier
 
-$beta-font-family	: sans-serif;
 $beta-font-weight	: 700;
 
 // Grid
@@ -76,13 +76,15 @@ $shadow			: 21%; // Range: 0-100%
 $highlight		: 0%; // Range: 0-100%
 
 // Colors
+$alpha-color		: #232529;
 
-$alpha-text-color	: #444;
-$beta-text-color	: #777;
+$alpha-text-color	: hsl(hue($alpha-color), 7.5, 15);
+$beta-text-color	: hsl(hue($alpha-text-color),7.5,30);
 
-$alpha-ui-color		: #0A69E7; // Primary elements
-$beta-ui-color		: #CCC; // Secondary elements
-$gamma-ui-color		: #DDD; // Used for borders
+
+$alpha-ui-color		: hsl(150, 90, 45); // Primary elements
+$beta-ui-color		: hsl(hue($alpha-text-color),5,80); // Secondary elements
+$gamma-ui-color		: hsl(hue($alpha-text-color),5,92.5);
 $delta-ui-color		: #FFF; // Used for backgrounds
 
 $error-color 		: red;
